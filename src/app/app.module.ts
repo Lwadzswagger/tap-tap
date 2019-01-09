@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+import { ContentComponent } from './Components/content/content.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent,
+    ContentComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

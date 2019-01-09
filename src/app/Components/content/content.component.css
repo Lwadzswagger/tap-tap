@@ -1,0 +1,23 @@
+.splash{
+    background-image: url('../../../assets/img/nick.jpg');
+    height: 100vh;
+    max-width: 1200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    }
+
+.splash .overlay {
+    position: absolute; /* Position the background text */
+    /* bottom: 0; At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    height: 100%;
+    padding: 20px; /* Some padding */
+}
+.text{
+    text-align: center;
+      /* margin: auto */
+  }
