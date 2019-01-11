@@ -1,17 +1,17 @@
 .splash{
-    background-image: url('../../../assets/img/nick.jpg');
+    background-image: url('../../../assets/img/nick1.jpg');
     height: 100vh;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top;
+    background-position: right;
     }
 
 .splash .overlay {
     position: absolute; /* Position the background text */
     /* bottom: 0; At the bottom. Use top:0 to append it to the top */
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    /* background:; Fallback color */
+    background: linear-gradient( to right, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0),rgba(0, 0, 0, 0)); /* Black background with 0.5 opacity */
     color: #f1f1f1; /* Grey text */
     width: 100%; /* Full width */
     height: 100%;
@@ -19,5 +19,19 @@
 }
 .text{
     text-align: center;
-      /* margin: auto */
   }
+  .card{
+      margin-top: 15px;
+      margin-bottom: 15px;
+      height: 380px;
+      box-shadow:7px 4px 5px 6px #ccc;
+  }
+
+  .card-img-top{
+    height: 131px;
+    /* object-fit: contain */
+  }
+  #Bio{
+      height: 70vh;
+      background-color: grey;
+    }
