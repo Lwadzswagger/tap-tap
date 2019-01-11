@@ -1,0 +1,27 @@
+<!-- <h1>Angular Bot</h1> -->
+
+<ng-container *ngFor="let message of messages | async">
+
+  <div class="message" *ngIf="message.sentBy === 'bot'" >
+      <img src="../../../assets/img/pixaby.jpeg" alt="Avatar" style="width:100%;">
+    {{ message.content }}
+    <br>
+    <span class="time-left">11:00</span>
+  </div>
+
+  <div class=" message darker" *ngIf="message.sentBy === 'user'">
+      <img src="../../../assets/img/pixaby.jpeg" alt="Avatar" class="right" >
+  {{ message.content }}
+    <br>
+    <span class="time-right">11:00</span>
+  </div>
+
+</ng-container>
+
+
+<label for="nameField">Your Message</label>
+
+
+<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+
+<button (click)="sendMessage()">Send</button> 
