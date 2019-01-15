@@ -12,9 +12,10 @@ export class ChatBotComponent implements OnInit {
 
   messages: Observable<Message[]>;
   formValue: string;
+  today = Date.now();
+  liveChat;
 
-
-  constructor(public chat: ChatService) { }
+  constructor(public chat: ChatService) {this.liveChat = this.chat.liveChat;  }
  ngOnInit() {
     // appends to array after each new message is added to feedSource
     this.messages = this.chat.conversation.asObservable()
@@ -22,8 +23,10 @@ export class ChatBotComponent implements OnInit {
   }
 
   sendMessage() {
-    this.chat.converse(this.formValue);
-    this.formValue = '';
+if (this.formValue) {
+  this.chat.converse(this.formValue);
+  this.formValue = '';
+}
   }
 
 

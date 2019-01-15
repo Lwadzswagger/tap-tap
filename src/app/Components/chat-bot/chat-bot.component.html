@@ -1,27 +1,52 @@
-<!-- <h1>Angular Bot</h1> -->
+ 
+    <div class="col-md-4 col-xl-3 chat" *ngIf="liveChat">
+        <div class="card mb-sm-3 mb-md-0 contacts_card">
+          <div class="card-header">
+      
+              
+            <div class="input-group-prepend">
+                 <span style="width:285px; color:#fff;">Live chat with a Bot</span>
+                 <span (click)="liveChat = !liveChat" style="color:white"  class="btn"><i class="fa fa-times"></i></span>
+							</div>
+          </div>
+      
+      
+          <div class="card-body msg_card_body">
+            <div class="dialogue" *ngFor="let message of messages | async">
+              <div class="d-flex justify-content-start mb-4" *ngIf="message.sentBy === 'bot'">
+                <div class="img_cont_msg">
+                  <img src="../../../assets/img/pixaby.jpeg" class="rounded-circle user_img_msg">
+                </div>
+                <div class="msg_cotainer">
+                  {{ message.content }}
+                  <span class="msg_time_send">{{ today | date:'shortTime' }}  , Today</span>
+                </div>
+              </div>
+      
+              <div class="d-flex justify-content-end mb-4" *ngIf="message.sentBy === 'user'">
+                <div class="msg_cotainer_send">
+                  {{ message.content }}
+                  <span class="msg_time_send">{{ today | date:'shortTime' }} , Today</span>
+                </div>
+                <div class="img_cont_msg">
+                  <img src="../../../assets/img/userPlacegolder.png" class="rounded-circle user_img_msg">
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card-footer">
+            <div class="input-group">
+              <textarea name="" class="form-control type_msg" [(ngModel)]="formValue" (keyup.enter)="sendMessage()"
+                placeholder="Type your message..."></textarea>
+              <div class="input-group-append">
+                <span (click)="sendMessage()" class="input-group-text send_btn"><i class="fa fa-location-arrow"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
 
-<ng-container *ngFor="let message of messages | async">
-
-  <div class="message" *ngIf="message.sentBy === 'bot'" >
-      <img src="../../../assets/img/pixaby.jpeg" alt="Avatar" style="width:100%;">
-    {{ message.content }}
-    <br>
-    <span class="time-left">11:00</span>
-  </div>
-
-  <div class=" message darker" *ngIf="message.sentBy === 'user'">
-      <img src="../../../assets/img/pixaby.jpeg" alt="Avatar" class="right" >
-  {{ message.content }}
-    <br>
-    <span class="time-right">11:00</span>
-  </div>
-
-</ng-container>
-
-
-<label for="nameField">Your Message</label>
-
-
-<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-
-<button (click)="sendMessage()">Send</button> 
+      <div class="live-chat" (click)="liveChat = !liveChat" *ngIf="!liveChat"><br> <i class="fa fa-comments"></i>  Live Chat
+        <!-- <span class="btn" ></span> -->
+      </div>
