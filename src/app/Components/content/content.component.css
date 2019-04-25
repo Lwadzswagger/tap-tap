@@ -40,9 +40,11 @@
       margin-top: 14px
   }
   #Bio{
-      height: 50vh;
-      background-color: grey;
-      overflow: auto;
+    height: 50vh;
+    background-color: grey;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
     }
     .action{
         justify-content: space-between;
