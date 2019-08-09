@@ -6,7 +6,7 @@
 .card{
     height: 500px;
     border-radius: 15px !important;
-    background-color: rgba(0,0,0,0.4) !important;
+    background-color: #00000066 !important;
 } 
 .msg_card_body{
     overflow-y: auto;
@@ -177,7 +177,7 @@ margin-bottom: 15px !important;
     color: #fff;
     width: auto!important;
     z-index: 2147483646!important;
-    background: #2d2d2d!important;
+    background: #e6005c!important;
     background-color: #2d2d2d;
     border: 0!important;
     border-radius: 100px!important;
