@@ -11,17 +11,23 @@
 }
 
 .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    color: white;
-    display: block;
-    font-size: 18px;
-    /* transition: 0.3s; */
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 18px;
+  transition: 0.5s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  background-color: #f1f1f1;
   left: 3px;
+  transition: 0.5s;
+  border-radius:8px 0 0 8px;
+  color: #4d001f;
+  line-height: 1rem;
+  font-size: 18px;
+  margin-left: 20px
 }
 
 .thumbnail {
@@ -29,9 +35,9 @@
   border-radius: 4px; /* Rounded border */
   padding: 5px; /* Some padding */
   width: 150px; /* Set a small width */
-} 
-.mr{
-    margin-right: 15px
+}
+.mr {
+  margin-right: 15px;
 }
 .home {
   background: #1a000a;
@@ -44,21 +50,21 @@
   background: #4d001f;
   /* padding: 2% 0px 2% 0px !important; */
 }
-.service{
-    background: #660029;
-    /* padding: 2% 0px 2% 0px !important; */
+.service {
+  background: #660029;
+  /* padding: 2% 0px 2% 0px !important; */
 }
-.potfolio{
-    background: #800033;
-    /* padding: 2% 0px 2% 0px !important; */
+.potfolio {
+  background: #800033;
+  /* padding: 2% 0px 2% 0px !important; */
 }
-.review{
-    background: #99003d;
-    /* padding: 2% 0px 2% 0px !important; */
+.review {
+  background: #99003d;
+  /* padding: 2% 0px 2% 0px !important; */
 }
-.contact{
-    background: #b30047;
-    /* padding: 2% 0px 2% 0px !important; */
+.contact {
+  background: #b30047;
+  /* padding: 2% 0px 2% 0px !important; */
 }
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
@@ -98,8 +104,8 @@
   }
 }
 
-@media only screen and (min-width: 1240px){
-#Header_creative #Action_bar {
+@media only screen and (min-width: 1240px) {
+  #Header_creative #Action_bar {
     position: absolute;
     bottom: 0;
     top: auto;
@@ -108,4 +114,5 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}}
+  }
+}
